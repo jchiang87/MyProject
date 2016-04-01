@@ -7,6 +7,7 @@ install:
   - setup lsst_sims
   - eups declare -r . MyProject -t current
   - setup MyProject
+  - pip install MySQL-python --upgrade
 
 cache:
   directories:
