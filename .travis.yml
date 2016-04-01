@@ -7,7 +7,6 @@ install:
   - setup lsst_sims
   - eups declare -r . MyProject -t current
   - setup MyProject
-  - pip install MySQL-python --upgrade
 
 cache:
   directories:
@@ -17,7 +16,6 @@ services:
   - mysql
 
 before_script:
-  - which mysql
   - mysql -e 'create database myapp_test;'
   - mysql -e 'show databases;'
 
