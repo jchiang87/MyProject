@@ -1,4 +1,5 @@
-from __future__ import print_function
+#from __future__ import print_function, absolute_import
+from builtins import range
 import unittest
 import MySQLdb
 
@@ -61,4 +62,4 @@ class MySQL_TestCase(unittest.TestCase):
                        % self.table_name)
         results = [x[0] for x in cursor]
         cursor.close()
-        self.assertEqual(results, range(1, 6))
+        self.assertEqual(results, list(range(1, 6)))
