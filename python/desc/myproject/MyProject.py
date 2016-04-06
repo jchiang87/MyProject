@@ -1,3 +1,5 @@
+__all__ = ['MyProject']
+
 class MyProject(object):
     '''
     Example class for MyProject package.

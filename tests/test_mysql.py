@@ -1,5 +1,8 @@
+from __future__ import print_function
 import unittest
 import MySQLdb
+
+print("testing MySQLdb")
 
 def get_db_info():
     """
@@ -13,16 +16,16 @@ def get_db_info():
             # Travis CI usage:
             my_db_info = dict(db='myapp_test', user='travis', host='127.0.0.1')
             test = MySQLdb.connect(**my_db_info)
-        except Exception, eobj:
-            print eobj
+        except Exception as eobj:
+            print(eobj)
             # User's configuration:
             my_db_info = dict(db='test', read_default_file='~/.my.cnf')
             test = MySQLdb.connect(**my_db_info)
         test.close()
         db_info = my_db_info
-    except Exception, eobj:
-        print "No database connection:"
-        print eobj
+    except Exception as eobj:
+        print("No database connection:")
+        print(eobj)
     return db_info
 
 _db_info = get_db_info()

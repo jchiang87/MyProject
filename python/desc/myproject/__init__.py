@@ -1,1 +1,1 @@
-from MyProject import *
+from .MyProject import *

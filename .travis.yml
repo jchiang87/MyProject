@@ -1,4 +1,7 @@
-language: C
+language: python
+
+python:
+  - "3.2"
 
 install:
   - CHANNEL=http://eupsforge.net/conda/dev ./setup/install.sh lsst-sims nose pandas
@@ -21,3 +24,4 @@ before_script:
 
 script:
   - nosetests -s
+  - pylint `find . -name \*.py -print`
