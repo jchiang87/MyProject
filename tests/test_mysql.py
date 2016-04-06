@@ -3,8 +3,6 @@ from builtins import range
 import unittest
 import MySQLdb
 
-print("testing MySQLdb")
-
 def get_db_info():
     """
     Try to connect to Travis CI MySQL services or the user's via
