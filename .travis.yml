@@ -8,6 +8,7 @@ install:
   - eups declare -r . MyProject -t current
   - setup MyProject
   - pip install future --upgrade
+  - pip install pylint
 
 cache:
   directories:
