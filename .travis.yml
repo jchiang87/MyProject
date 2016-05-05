@@ -16,6 +16,7 @@ install:
 cache:
   directories:
   - $HOME/miniconda.tarball
+  timeout: 360
 
 services:
   - mysql
