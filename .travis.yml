@@ -26,7 +26,7 @@ before_script:
   - mysql -e 'show databases;'
 
 script:
-  - coverage run --source=desc.myproject tests/run_tests.py
+  - nosetests -s --with-coverage --cover-package=desc.myproject
   - pylint --py3k `find . -name \*.py -print`
 
 after_success:
