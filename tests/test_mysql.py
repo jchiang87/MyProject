@@ -60,3 +60,6 @@ class MySQL_TestCase(unittest.TestCase):
         results = [x[0] for x in cursor]
         cursor.close()
         self.assertEqual(results, list(range(1, 6)))
+
+if __name__ == '__main__':
+    unittest.main()
